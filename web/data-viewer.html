@@ -8,19 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Wide 60/40 Layout - Center aligned with maximum usable space */
+        /* SIMPLE: Wide layout that actually works */
         .content-layout {
-            display: grid;
-            grid-template-columns: 60% 40%;
-            gap: 1.5rem;
-            height: calc(100vh - 180px);
-            max-height: calc(100vh - 180px);
+            display: flex;
+            gap: 1rem;
+            height: 80vh;
             width: 100%;
-            max-width: 1600px;
-            margin: 0 auto;
         }
         
         .data-viewer {
+            flex: 0 0 60%;
             background: var(--bg-secondary);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
@@ -31,6 +28,7 @@
         }
 
         .chat-container {
+            flex: 0 0 40%;
             background: var(--bg-secondary);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
@@ -449,9 +447,9 @@
         </header>
 
         <!-- Main Content -->
-        <div class="main-content" style="max-width: 1600px; width: 95vw; margin: 0 auto; padding: 1rem; overflow-x: hidden;">
+        <div class="main-content" style="max-width: none; width: 98vw; margin: 0 auto; padding: 1rem; overflow-x: hidden;">
             
-            <!-- Content Layout: Data Viewer (65%) + Chat (35%) -->
+            <!-- Content Layout: Data Viewer (60%) + Chat (40%) -->
             <div class="content-layout">
                 <!-- Data Viewer Section -->
                 <section class="data-viewer">
