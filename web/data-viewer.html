@@ -11,19 +11,20 @@
         /* Additional styles for data viewer and chat */
         .content-layout {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: stretch;
             min-height: 800px;
             max-width: 100%;
             overflow: hidden;
+            width: 100%;
         }
         
         .data-viewer {
             background: var(--bg-secondary);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
-            width: calc(70% - 0.75rem);
-            max-width: calc(70% - 0.75rem);
+            width: calc(70% - 1rem);
+            max-width: calc(70% - 1rem);
             min-width: 0;
             display: flex;
             flex-direction: column;
@@ -72,19 +73,19 @@
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px; /* Reduced minimum width */
+            min-width: 900px; /* Increased minimum width to use more space */
             max-width: 100%;
         }
 
         .data-table th,
         .data-table td {
-            padding: 0.5rem 0.75rem; /* Slightly reduced padding */
+            padding: 0.75rem; /* Increased padding for better spacing */
             text-align: left;
             border-bottom: 1px solid var(--border-color);
             font-size: 0.875rem;
             white-space: nowrap;
-            min-width: 80px; /* Reduced minimum column width */
-            max-width: 150px; /* Added maximum column width */
+            min-width: 100px; /* Increased minimum column width */
+            max-width: 200px; /* Increased maximum column width */
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -159,8 +160,8 @@
             background: var(--bg-secondary);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
-            width: calc(30% - 0.75rem);
-            max-width: calc(30% - 0.75rem);
+            width: calc(30% - 1rem);
+            max-width: calc(30% - 1rem);
             min-width: 0;
             display: flex;
             flex-direction: column;
@@ -337,8 +338,9 @@
 
         @media (max-width: 768px) {
             .main-content {
-                padding: 0 1rem !important;
-                max-width: 100% !important;
+                padding: 0 0.5rem !important;
+                max-width: 98vw !important;
+                width: 98vw !important;
             }
             
             .content-layout {
@@ -360,12 +362,16 @@
                 min-width: auto;
             }
             
+            .data-table {
+                min-width: 700px; /* Maintain reasonable table width on mobile */
+            }
+            
             .data-table th,
             .data-table td {
-                min-width: 60px;
-                max-width: 100px;
+                min-width: 80px;
+                max-width: 120px;
                 font-size: 0.8rem;
-                padding: 0.4rem 0.5rem;
+                padding: 0.5rem 0.6rem;
             }
         }
 
@@ -442,7 +448,7 @@
         </header>
 
         <!-- Main Content -->
-        <div class="main-content" style="max-width: 1400px; margin: 2rem auto; padding: 0 2rem; overflow-x: hidden;">
+        <div class="main-content" style="max-width: 95vw; width: 95vw; margin: 2rem auto; padding: 0 1rem; overflow-x: hidden;">
             
             <!-- Content Layout: Data Viewer (70%) + Chat (30%) -->
             <div class="content-layout">
