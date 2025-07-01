@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Clean 70/30 Layout for Data Viewer and Chat */
+        /* Clean 75/25 Layout for Data Viewer and Chat */
         .content-layout {
             display: grid;
-            grid-template-columns: 70% 30%;
-            gap: 1.5rem;
+            grid-template-columns: 75% 25%;
+            gap: 1rem;
             height: 90vh;
             max-height: 90vh;
             width: 100%;
@@ -39,7 +39,7 @@
         }
 
         .viewer-header {
-            padding: 1.5rem;
+            padding: 1rem 1.5rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: between;
@@ -80,19 +80,20 @@
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 800px;
+            min-width: 1000px;
         }
 
         .data-table th,
         .data-table td {
-            padding: 0.75rem;
+            padding: 0.75rem 1rem;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
             font-size: 0.875rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 200px;
+            min-width: 120px;
+            max-width: 250px;
         }
 
         .data-table th {
@@ -161,7 +162,7 @@
         /* Chat Interface - using styles defined above */
 
         .chat-header {
-            padding: 1.5rem;
+            padding: 1rem 1.5rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
@@ -437,9 +438,9 @@
         </header>
 
         <!-- Main Content -->
-        <div class="main-content" style="max-width: 95vw; width: 95vw; margin: 2rem auto; padding: 0 1rem; overflow-x: hidden;">
+        <div class="main-content" style="max-width: 98vw; width: 98vw; margin: 1rem auto; padding: 0 1rem; overflow-x: hidden;">
             
-            <!-- Content Layout: Data Viewer (70%) + Chat (30%) -->
+            <!-- Content Layout: Data Viewer (75%) + Chat (25%) -->
             <div class="content-layout">
                 <!-- Data Viewer Section -->
                 <section class="data-viewer">
