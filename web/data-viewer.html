@@ -26,6 +26,7 @@
             flex-direction: column;
             overflow: hidden;
             min-height: 0;
+            min-width: 0; /* Prevent table from expanding beyond container */
         }
 
         .chat-container {
@@ -82,8 +83,9 @@
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 100%;
+            min-width: 600px; /* Minimum width for readability */
             font-size: 0.875rem;
+            table-layout: fixed; /* Fixed layout to prevent overflow */
         }
 
         .data-table th,
@@ -95,7 +97,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            width: auto;
+            width: 16.67%; /* Equal width distribution for 6 columns */
         }
 
         .data-table th {
@@ -317,34 +319,39 @@
         /* Responsive design */
         @media (max-width: 1400px) {
             .content-layout {
-                grid-template-columns: 60% 40%;
-                gap: 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .data-viewer,
+            .chat-container {
+                flex: none;
             }
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 900px) {
             .content-layout {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto auto;
-                gap: 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
                 height: auto;
             }
             
             .data-viewer,
             .chat-container {
-                min-height: 500px;
+                flex: none;
+                min-height: 400px;
             }
         }
 
         @media (max-width: 768px) {
             .main-content {
-                padding: 0 0.5rem !important;
-                max-width: 98vw !important;
-                width: 98vw !important;
+                padding: 0.25rem !important;
+                width: auto !important;
             }
             
             .content-layout {
-                gap: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
             }
             
             .viewer-header {
@@ -363,7 +370,7 @@
             }
             
             .data-table {
-                min-width: 700px;
+                min-width: auto;
                 font-size: 0.8rem;
             }
             
