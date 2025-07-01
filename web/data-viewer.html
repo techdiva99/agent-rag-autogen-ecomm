@@ -8,14 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Clean 75/25 Layout for Data Viewer and Chat */
+        /* Clean 70/30 Layout for Data Viewer and Chat */
         .content-layout {
             display: grid;
-            grid-template-columns: 75% 25%;
-            gap: 1rem;
+            grid-template-columns: 70% 30%;
+            gap: 2rem;
             height: 90vh;
             max-height: 90vh;
             width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
         }
         
         .data-viewer {
@@ -39,7 +41,7 @@
         }
 
         .viewer-header {
-            padding: 1rem 1.5rem;
+            padding: 1.5rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: between;
@@ -162,7 +164,7 @@
         /* Chat Interface - using styles defined above */
 
         .chat-header {
-            padding: 1rem 1.5rem;
+            padding: 1.5rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
@@ -438,9 +440,9 @@
         </header>
 
         <!-- Main Content -->
-        <div class="main-content" style="max-width: 98vw; width: 98vw; margin: 1rem auto; padding: 0 1rem; overflow-x: hidden;">
+        <div class="main-content" style="max-width: 1600px; width: 90vw; margin: 2rem auto; padding: 0 1rem; overflow-x: hidden;">
             
-            <!-- Content Layout: Data Viewer (75%) + Chat (25%) -->
+            <!-- Content Layout: Data Viewer (70%) + Chat (30%) -->
             <div class="content-layout">
                 <!-- Data Viewer Section -->
                 <section class="data-viewer">
