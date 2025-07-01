@@ -1,0 +1,29 @@
+2025-07-01 13:42:35,262 - INFO - Scheduled data checks every 1 hours
+2025-07-01 13:42:35,262 - INFO - Checking for data updates...
+2025-07-01 13:42:35,262 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:42:35,547 - INFO - Successfully saved JSON data to: example_data/temp_count.json
+2025-07-01 13:42:35,547 - INFO - Records downloaded: 1
+2025-07-01 13:42:35,548 - INFO - New data available: 12068 records (was 0)
+2025-07-01 13:42:35,548 - INFO - Data file not found, will download
+2025-07-01 13:42:35,548 - INFO - Checking for data updates...
+2025-07-01 13:42:35,548 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:42:35,602 - INFO - Successfully saved JSON data to: example_data/temp_count.json
+2025-07-01 13:42:35,602 - INFO - Records downloaded: 1
+2025-07-01 13:42:35,603 - INFO - No new data: 12068 records
+2025-07-01 13:42:35,603 - INFO - No updates available, skipping download
+2025-07-01 13:42:35,603 - ERROR - Error loading data: [Errno 2] No such file or directory: 'example_data/cms_full_dataset.json'
+2025-07-01 13:42:35,603 - INFO - Scheduled data checks every 24 hours
+2025-07-01 13:42:35,693 - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:35,790 - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:35,893 - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:35,908 - INFO - Scheduled data checks every 24 hours
+2025-07-01 13:42:36,000 - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:36,119 - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:36,238 - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:36,248 - INFO - Downloading latest CMS data...
+2025-07-01 13:42:36,248 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:42:36,950 - INFO - Successfully saved JSON data to: cms_data/cms_full_dataset.json
+2025-07-01 13:42:36,950 - INFO - Records downloaded: 12068
+2025-07-01 13:42:36,959 - INFO - Successfully downloaded 0 records
+2025-07-01 13:42:36,962 - INFO - Scheduled data checks every 24 hours
+2025-07-01 13:42:37,043 - INFO - Loaded 12068 records from local file

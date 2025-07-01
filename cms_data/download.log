@@ -1,0 +1,16 @@
+2025-07-01 13:28:27,500 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:28:27,688 - INFO - Successfully saved JSON data to: cms_data/cms_sample_10_records.json
+2025-07-01 13:28:27,689 - INFO - Records downloaded: 10
+2025-07-01 13:28:37,276 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:28:37,422 - INFO - Successfully saved JSON data to: cms_data/cms_sample_10_records.json
+2025-07-01 13:28:37,422 - INFO - Records downloaded: 10
+2025-07-01 13:29:46,238 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:29:46,611 - INFO - Successfully saved JSON data to: cms_data/cms_record_count.json
+2025-07-01 13:29:46,611 - INFO - Records downloaded: 1
+2025-07-01 13:31:02,446 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:31:03,870 - INFO - Successfully saved JSON data to: cms_data/cms_full_dataset.json
+2025-07-01 13:31:03,870 - INFO - Records downloaded: 12068
+2025-07-01 13:31:20,079 - INFO - Downloading JSON data from: https://data.cms.gov/provider-data/api/1/datastore/sql
+2025-07-01 13:31:20,754 - INFO - Successfully saved JSON data to: cms_data/cms_full_dataset.json
+2025-07-01 13:31:20,754 - INFO - Records downloaded: 12068
+2025-07-01 13:44:35,735 - INFO - Scheduled data checks every 24 hours

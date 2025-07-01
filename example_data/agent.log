@@ -1,0 +1,20 @@
+2025-07-01 13:42:35,262 - cms_agent - INFO - Scheduled data checks every 1 hours
+2025-07-01 13:42:35,262 - cms_agent - INFO - Checking for data updates...
+2025-07-01 13:42:35,548 - cms_agent - INFO - New data available: 12068 records (was 0)
+2025-07-01 13:42:35,548 - cms_agent - INFO - Data file not found, will download
+2025-07-01 13:42:35,548 - cms_agent - INFO - Checking for data updates...
+2025-07-01 13:42:35,603 - cms_agent - INFO - No new data: 12068 records
+2025-07-01 13:42:35,603 - cms_agent - INFO - No updates available, skipping download
+2025-07-01 13:42:35,603 - cms_agent - ERROR - Error loading data: [Errno 2] No such file or directory: 'example_data/cms_full_dataset.json'
+2025-07-01 13:42:35,603 - cms_agent - INFO - Scheduled data checks every 24 hours
+2025-07-01 13:42:35,693 - cms_agent - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:35,790 - cms_agent - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:35,893 - cms_agent - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:35,908 - cms_agent - INFO - Scheduled data checks every 24 hours
+2025-07-01 13:42:36,000 - cms_agent - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:36,119 - cms_agent - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:36,238 - cms_agent - INFO - Loaded 12068 records from local file
+2025-07-01 13:42:36,248 - cms_agent - INFO - Downloading latest CMS data...
+2025-07-01 13:42:36,959 - cms_agent - INFO - Successfully downloaded 0 records
+2025-07-01 13:42:36,962 - cms_agent - INFO - Scheduled data checks every 24 hours
+2025-07-01 13:42:37,043 - cms_agent - INFO - Loaded 12068 records from local file

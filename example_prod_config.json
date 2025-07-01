@@ -1,0 +1,62 @@
+{
+  "output_dir": "/data/cms_data",
+  "check_interval_hours": 6,
+  "auto_update": true,
+  "max_retries": 3,
+  "embedding_model": "text-embedding-ada-002",
+  "vector_db_type": "chromadb",
+  "vector_db_config": {
+    "chromadb": {
+      "path": "./chroma_db",
+      "collection_name": "cms_providers"
+    },
+    "pinecone": {
+      "api_key": null,
+      "environment": "us-west1-gcp",
+      "index_name": "cms-providers"
+    }
+  },
+  "enable_logging": true,
+  "log_level": "INFO",
+  "enable_metrics": true,
+  "metrics_endpoint": null,
+  "agent_name": "cms_data_agent",
+  "enable_autogen": true,
+  "enable_langchain": false,
+  "enable_validation": true,
+  "validation_rules": {
+    "min_records": 10000,
+    "required_fields": [
+      "cms_certification_number_ccn",
+      "hhcahps_survey_summary_star_rating"
+    ],
+    "valid_ratings": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      ""
+    ],
+    "max_file_age_hours": 48
+  },
+  "enable_notifications": true,
+  "notification_config": {
+    "email": {
+      "enabled": false,
+      "smtp_server": null,
+      "smtp_port": 587,
+      "username": null,
+      "password": null,
+      "recipients": []
+    },
+    "slack": {
+      "enabled": false,
+      "webhook_url": null
+    },
+    "webhook": {
+      "enabled": false,
+      "url": null
+    }
+  }
+}

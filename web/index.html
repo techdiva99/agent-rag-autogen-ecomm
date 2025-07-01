@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Data Agent Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>CMS Data Agent</h1>
+                    <span class="subtitle">Healthcare Provider Data Intelligence</span>
+                </div>
+                <div class="header-actions">
+                    <a href="data-viewer.html" class="btn btn-outline">
+                        <i class="fas fa-table"></i> Browse Data
+                    </a>
+                    <button id="refreshBtn" class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button id="downloadBtn" class="btn btn-success">
+                        <i class="fas fa-download"></i> Download Data
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Status Overview -->
+        <section class="status-overview">
+            <div class="status-cards">
+                <div class="card status-card">
+                    <div class="card-icon health">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Agent Status</h3>
+                        <div class="status-indicator" id="agentStatus">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <div class="card-icon data">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Total Records</h3>
+                        <div class="metric-value" id="recordCount">12,068</div>
+                        <div class="metric-label">Healthcare Providers</div>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <div class="card-icon update">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Last Update</h3>
+                        <div class="metric-value" id="lastUpdate">2 hours ago</div>
+                        <div class="metric-label">Data Freshness</div>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <div class="card-icon size">
+                        <i class="fas fa-hdd"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Dataset Size</h3>
+                        <div class="metric-value" id="dataSize">21.5 MB</div>
+                        <div class="metric-label">JSON Format</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <!-- Data Quality -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-check-circle"></i> Data Quality</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="quality-metrics">
+                            <div class="quality-item">
+                                <span class="quality-label">Completeness</span>
+                                <div class="quality-bar">
+                                    <div class="quality-fill" style="width: 98%"></div>
+                                </div>
+                                <span class="quality-value">98%</span>
+                            </div>
+                            <div class="quality-item">
+                                <span class="quality-label">Validity</span>
+                                <div class="quality-bar">
+                                    <div class="quality-fill" style="width: 96%"></div>
+                                </div>
+                                <span class="quality-value">96%</span>
+                            </div>
+                            <div class="quality-item">
+                                <span class="quality-label">Freshness</span>
+                                <div class="quality-bar">
+                                    <div class="quality-fill" style="width: 92%"></div>
+                                </div>
+                                <span class="quality-value">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-list" id="activityList">
+                            <div class="activity-item">
+                                <div class="activity-icon success">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Data Download Complete</div>
+                                    <div class="activity-time">2 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon info">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Checking for Updates</div>
+                                    <div class="activity-time">4 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Validation Warning</div>
+                                    <div class="activity-time">1 day ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <!-- Star Rating Distribution -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-star"></i> Provider Ratings Distribution</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="ratingChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Performers -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-trophy"></i> Top Performers</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="top-performers" id="topPerformers">
+                            <div class="performer-item">
+                                <div class="performer-rank">1</div>
+                                <div class="performer-info">
+                                    <div class="performer-name">Provider 257085</div>
+                                    <div class="performer-rating">
+                                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                                        <span class="surveys">1,553 surveys</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer-item">
+                                <div class="performer-rank">2</div>
+                                <div class="performer-info">
+                                    <div class="performer-name">Provider 557061</div>
+                                    <div class="performer-rating">
+                                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                                        <span class="surveys">1,546 surveys</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="performer-item">
+                                <div class="performer-rank">3</div>
+                                <div class="performer-info">
+                                    <div class="performer-name">Provider 397012</div>
+                                    <div class="performer-rating">
+                                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                                        <span class="surveys">1,240 surveys</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <section class="control-panel">
+            <div class="card">
+                <div class="card-header">
+                    <h3><i class="fas fa-cogs"></i> Agent Controls</h3>
+                </div>
+                <div class="card-body">
+                    <div class="controls-grid">
+                        <div class="control-group">
+                            <label>Update Interval</label>
+                            <select id="updateInterval" class="form-control">
+                                <option value="1">Every Hour</option>
+                                <option value="6" selected>Every 6 Hours</option>
+                                <option value="12">Every 12 Hours</option>
+                                <option value="24">Daily</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Auto Update</label>
+                            <label class="switch">
+                                <input type="checkbox" id="autoUpdate" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <button id="checkUpdatesBtn" class="btn btn-outline">
+                                <i class="fas fa-search"></i> Check for Updates
+                            </button>
+                        </div>
+                        <div class="control-group">
+                            <button id="validateDataBtn" class="btn btn-outline">
+                                <i class="fas fa-shield-alt"></i> Validate Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Modal -->
+        <div id="progressModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Agent Progress</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text" id="progressText">Initializing...</div>
+                    </div>
+                    <div class="log-output" id="logOutput"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

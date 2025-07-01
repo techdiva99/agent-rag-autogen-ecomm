@@ -1,0 +1,72 @@
+{
+  "rating_distribution": {
+    "1": 88,
+    "2": 409,
+    "3": 1212,
+    "4": 2088,
+    "5": 888
+  },
+  "top_performers": [
+    {
+      "id": "257085",
+      "name": "Provider 257085",
+      "rating": 5.0,
+      "survey_count": 1553
+    },
+    {
+      "id": "557061",
+      "name": "Provider 557061",
+      "rating": 5.0,
+      "survey_count": 1546
+    },
+    {
+      "id": "397012",
+      "name": "Provider 397012",
+      "rating": 5.0,
+      "survey_count": 1240
+    },
+    {
+      "id": "257102",
+      "name": "Provider 257102",
+      "rating": 5.0,
+      "survey_count": 1238
+    },
+    {
+      "id": "257129",
+      "name": "Provider 257129",
+      "rating": 5.0,
+      "survey_count": 1207
+    },
+    {
+      "id": "417023",
+      "name": "Provider 417023",
+      "rating": 5.0,
+      "survey_count": 1053
+    },
+    {
+      "id": "187099",
+      "name": "Provider 187099",
+      "rating": 5.0,
+      "survey_count": 1040
+    },
+    {
+      "id": "527178",
+      "name": "Provider 527178",
+      "rating": 5.0,
+      "survey_count": 870
+    },
+    {
+      "id": "227082",
+      "name": "Provider 227082",
+      "rating": 5.0,
+      "survey_count": 755
+    },
+    {
+      "id": "557012",
+      "name": "Provider 557012",
+      "rating": 5.0,
+      "survey_count": 679
+    }
+  ],
+  "generated_at": "2025-07-01T14:36:43.222519"
+}
