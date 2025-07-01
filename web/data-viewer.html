@@ -17,7 +17,7 @@
         }
         
         .data-viewer {
-            flex: 0 0 60%;
+            flex: 0 0 70%; /* Increased from 60% to 70% for better data visibility */
             width: auto;
             background: var(--bg-secondary);
             border-radius: var(--radius-lg);
@@ -30,7 +30,7 @@
         }
 
         .chat-container {
-            flex: 0 0 40%;
+            flex: 0 0 30%; /* Reduced from 40% to 30% to give more space to data viewer */
             width: auto;
             background: var(--bg-secondary);
             border-radius: var(--radius-lg);
@@ -83,9 +83,9 @@
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px; /* Minimum width for readability */
+            min-width: 800px; /* Increased minimum width for better data visibility */
             font-size: 0.875rem;
-            table-layout: fixed; /* Fixed layout to prevent overflow */
+            table-layout: auto; /* Auto layout allows flexible column sizing */
         }
 
         .data-table th,
@@ -97,7 +97,8 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            width: 16.67%; /* Equal width distribution for 6 columns */
+            min-width: 120px; /* Minimum width for readability */
+            max-width: 300px; /* Maximum width to prevent overly wide columns */
         }
 
         .data-table th {
